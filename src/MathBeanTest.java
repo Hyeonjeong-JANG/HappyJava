@@ -10,6 +10,4 @@ public class MathBeanTest {
         System.out.println(value);
     }
 
-//    //static한 메소드는 인스턴스를 생성하지 않아도 호출할 수 있다. 갑자기? 이게머꼬
-//    VendingMachine.printVersion();
 }
