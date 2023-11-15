@@ -38,26 +38,23 @@ class ExceptionObj1 {
 //}//코드1에서 Exception이 생기면 코드2로 가지 않고 해당 Exception과 관련된 catch블록으로 가서 그 블록이 실행되고 끝난다.
 */
 
-//예외 던지기 Exception Throw
+//예외 떠넘기기 Exception Throw
 public class Exception1 {
     public static void main(String[] args) {
         ExceptionObj1 exobj = new ExceptionObj1();
-        int value = exobj.divide(10, 0);
-        System.out.println(value);
-    }
-}
-
-//A라는 사용자
-class ExceptionObj1 {
-    public int divide(int i, int k) {
-        int value = 0;
-
-        try {
-            value = i / k;
-        } catch (ArithmeticException ex) {
-            System.out.println("0으로 나눌 수 없어요.");
-            System.out.println(ex.toString());
+        try{
+            int value = exobj.divide(10, 0);
+            System.out.println(value);
+        } catch (ArithmeticException ex){
+            System.out.println("0으로 나눌 수 없습니다.");
         }
-        return value;
     }
 }
+
+//예외 떠넘기기
+
+//리턴타입 메소드명(아규먼트 리스트) throws Exception클래스명1, Exception클래스명2 ...{
+//      코드1
+//      코드2
+//      ...
+//}

@@ -1,4 +1,4 @@
-public class ArrayIndexOutOfBoundsException {
+public class ArrayIndexOutOfBoundsException extends Throwable {
     public static void main(String[] args) {
         double[] array = {1.5, 2.4, 3.5};
 
